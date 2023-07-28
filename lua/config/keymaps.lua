@@ -15,5 +15,6 @@ function map(mode, lhs, rhs, opts)
   vim.keymap.set("n", "<leader>rq", ":RunClose<CR>", { noremap = true, silent = false })
   vim.keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, silent = false })
   vim.keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, silent = false })
+  vim.keymap.set({ "n", "v", "i" }, "<C-s>", ":w <CR> :mks!<CR><esc>", { noremap = true, silent = true })
 end
 map("i", "jk", "<ESC>")
