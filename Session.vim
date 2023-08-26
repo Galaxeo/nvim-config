@@ -13,10 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +18 ~/.config/nvim/lua/config/keymaps.lua
+badd +7 ~/.config/nvim/lua/plugins/todo-comments.lua
 argglobal
 %argdel
-edit ~/.config/nvim/lua/config/keymaps.lua
+edit ~/.config/nvim/lua/plugins/todo-comments.lua
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
 wincmd t
 let s:save_winminheight = &winminheight
 let s:save_winminwidth = &winminwidth
@@ -25,12 +30,12 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-let s:l = 18 - ((17 * winheight(0) + 14) / 28)
+let s:l = 7 - ((6 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 18
-normal! 025|
+keepjumps 7
+normal! 03|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
