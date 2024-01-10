@@ -1,4 +1,14 @@
-# 💤 LazyVim
+# Neovim Config
+If planning to install for home, make sure that these requirements are met:
+1. neovim v0.9.1+
+2. running through the [lazyvim setup](https://www.lazyvim.org/installation)
+3. install [ripgrep](https://github.com/BurntSushi/ripgrep#installation), [lazygit](https://github.com/jesseduffield/lazygit#installation), and [findfd](https://github.com/sharkdp/fd)
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+more notes: make sure that node.js is fully upgraded in order to not get language server bugs
+
+adding personal setup here for self if need to set up on a new computer
+### Personal Setup
+- WSL2 w/ Ubuntu
+- Windows Terminal w/ kanagawa bones color scheme, pure theme (ohmyzsh)
+- Lilex font
+- Ensure that Python & Node.js (through nvm) are latest versions for compatability with Neovim
